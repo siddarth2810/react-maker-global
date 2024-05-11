@@ -1,12 +1,17 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import React from "react";
 
-const RenderName = (props) => {
-  return <div>{props.name}</div>;
-};
-
-RenderName.propTypes = {
-  name: PropTypes.string,
-};
-
-export default RenderName;
+export default function RenderName() {
+  return (
+    <div>
+      <h1>Hello from the main page of the app!</h1>
+      <p>Here are some examples of links to other pages</p>
+      <nav>
+        <ul>
+          <li>
+            <a href="profile">Profile page</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+}

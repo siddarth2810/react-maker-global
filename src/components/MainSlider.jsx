@@ -12,8 +12,6 @@ import mobileSlide2 from "../assets/images/mobile-slider2.webp";
 import mobileSlide3 from "../assets/images/mobile-slider3.jpg";
 import mobileSlideVideo from "../assets/images/mobile-slider_1_.webm";
 
-
-
 export default function MainSlider() {
   return (
     <>
@@ -23,11 +21,11 @@ export default function MainSlider() {
           className="owl-theme "
           loop
           nav
-          autoplayTimeout={5000}
+          autoplayTimeout={5500}
+          autoplaySpeed={5000}
           autoplay
           dots={false}
-          margin={0}
-        >
+          margin={0}>
           <div>
             <img className="img" src={slide1} />
           </div>
@@ -54,8 +52,7 @@ export default function MainSlider() {
           autoplayTimeout={5000}
           autoplay
           dots
-          margin={15}
-        >
+          margin={15}>
           <div>
             <img className="img" src={mobileSlide1} />
           </div>
@@ -116,14 +113,6 @@ export default function MainSlider() {
           </div>
         </div>
       </div>
-
-     
-
-
-
-
-
-
     </>
   );
 }
