@@ -4,7 +4,6 @@ import whatsappIcon from "../assets/icons/whatsapp.png";
 import emailIcon from "../assets/icons/email.png";
 import Navbar_brand_icon from "../assets/icons/main-icon.png";
 
-
 export default function Header() {
   return (
     <>
@@ -13,21 +12,33 @@ export default function Header() {
           <div className="wrapper">
             <div className="contact-info-two">
               <a href="tel://+918341316555">
-                <img src={telephoneIcon} className="header-icon" alt="call-makerglobal"/>
+                <img
+                  src={telephoneIcon}
+                  className="header-icon"
+                  alt="call-makerglobal"
+                />
                 +91 8341316555 (IVR)
               </a>
             </div>
 
             <div className="contact-info-one">
               <a href="https://wa.me/message/I6AAM2FS77U7F1" target="_blank">
-                <img src={whatsappIcon} className="header-icon" alt="whatsapp-makerglobal"/>
+                <img
+                  src={whatsappIcon}
+                  className="header-icon"
+                  alt="whatsapp-makerglobal"
+                />
                 +91 9629440854
               </a>
             </div>
           </div>
           <div className="header-mail">
             <a href="mailto:info@makerglobal.in">
-              <img src={emailIcon} className="header-icon" alt="email-makerglobal"/>
+              <img
+                src={emailIcon}
+                className="header-icon"
+                alt="email-makerglobal"
+              />
               Info@makerglobal.in
             </a>
           </div>
@@ -38,7 +49,11 @@ export default function Header() {
         <section className="navigation-section" id="title" data-scroll>
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-dark" id="barnav">
-              <img src={Navbar_brand_icon} className="MainLogo" alt="makerglobal-company-logo" />
+              <img
+                src={Navbar_brand_icon}
+                className="MainLogo"
+                alt="makerglobal-company-logo"
+              />
               <a className="navbar-brand" href="#">
                 {" "}
                 MAKER GLOBAL{" "}
@@ -49,16 +64,13 @@ export default function Header() {
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar"
                 aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon">
-               </span>
+                aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
               </button>
 
               <div
                 className="collapse navbar-collapse d-none d-lg-flex"
-                id="navbarSupportedContent"
-              >
+                id="navbarSupportedContent">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
                     <a className="nav-link" href="index.html" id="">
@@ -77,24 +89,21 @@ export default function Header() {
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
+                      aria-expanded="false">
                       Our Offerings
                     </a>
                     <ul className="dropdown-menu">
                       <li>
                         <a
                           className="dropdown-item"
-                          href="pages/rapid-prototyping.html"
-                        >
+                          href="pages/rapid-prototyping.html">
                           Rapid Prototyping
                         </a>
                       </li>
                       <li>
                         <a
                           className="dropdown-item"
-                          href="pages/3d-printers.html"
-                        >
+                          href="pages/3d-printers.html">
                           3D Printers
                         </a>
                       </li>
@@ -102,16 +111,14 @@ export default function Header() {
                         <a
                           className="dropdown-item"
                           href="pdf/SCALE MODELS.pdf"
-                          target="_blank"
-                        >
+                          target="_blank">
                           Scale Models
                         </a>
                       </li>
                       <li>
                         <a
                           className="dropdown-item"
-                          href="pages/metal-3d-printing.html"
-                        >
+                          href="pages/metal-3d-printing.html">
                           Metal 3D Printing
                         </a>
                       </li>
@@ -143,11 +150,14 @@ export default function Header() {
         className="offcanvas offcanvas-end"
         tabindex="-1"
         id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel"
-      >
+        aria-labelledby="offcanvasDarkNavbarLabel">
         <div className="offcanvas-header">
           <div className="sidebar-brand">
-            <img src={Navbar_brand_icon} className="MainLogo" alt="makerglobal-company-logo"/>
+            <img
+              src={Navbar_brand_icon}
+              className="MainLogo"
+              alt="makerglobal-company-logo"
+            />
             <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
               Maker Global
             </h5>
@@ -157,8 +167,7 @@ export default function Header() {
             type="button"
             className="btn-close btn-close-white"
             data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+            aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
           <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -175,16 +184,14 @@ export default function Header() {
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+                aria-expanded="false">
                 Our Offerings
               </a>
               <ul className="dropdown-menu dropdown-menu-dark">
                 <li>
                   <a
                     className="dropdown-item"
-                    href="pages/rapid-prototyping.html"
-                  >
+                    href="pages/rapid-prototyping.html">
                     Rapid Prototyping
                   </a>
                 </li>
@@ -197,16 +204,14 @@ export default function Header() {
                   <a
                     className="dropdown-item"
                     href="pdf/SCALE MODELS.pdf"
-                    target="_blank"
-                  >
+                    target="_blank">
                     Scale Models
                   </a>
                 </li>
                 <li>
                   <a
                     className="dropdown-item"
-                    href="pages/metal-3d-printing.html"
-                  >
+                    href="pages/metal-3d-printing.html">
                     Metal 3D Printing
                   </a>
                 </li>
@@ -221,8 +226,7 @@ export default function Header() {
               <a
                 className="nav-link"
                 aria-current="page"
-                href="pages/career.html"
-              >
+                href="pages/career.html">
                 Careers
               </a>
               <hr />
@@ -244,12 +248,6 @@ export default function Header() {
         {/* sidebar items end */}
       </div>
       {/* sidebar end */}
-
-
-
-
-
-      
     </>
   );
 }

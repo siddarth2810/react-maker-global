@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Overpass&display=swap');
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+.row {
+  margin: 3px;
 }
 
 
@@ -503,3 +513,510 @@ padding: 0;
       width: 95px;
     }
   }
+
+
+  /* styling the industries we served section  */
+  
+  #industries-carousel .owl-item > div {
+    margin: 6% 8%;
+    transition: margin 0.4s ease;
+  }
+  
+  @media (max-width: 768px) {
+    #section-title {
+      font-size: 20px;
+    }
+  }
+  #industries-carousel .owl-item.center > div {
+    cursor: auto;
+    margin: 0;
+  }
+
+
+
+  /* styling the contact us block */
+  
+  .contact-container {
+    padding: 0;
+  }
+  
+  .contact-container > .row > .feature-box {
+    padding: 3.5% 3.5% 3.5% 5px;
+  }
+  
+  .feature-box {
+    display: flex;
+  }
+  
+  .map-icon-img {
+    width: 52px;
+    height: 54px;
+  }
+  
+  .contact-telephone-img-div img {
+    width: 38px;
+    height: 33px;
+  }
+  
+  #mail-icon {
+    width: 38px;
+    height: 36px;
+  }
+  
+  /* for styles less than 768px */
+  
+  @media (max-width: 768px) {
+    .mail,
+    .map,
+    .feature-box {
+      height: 130px !important;
+  
+      padding: 0;
+    }
+  
+    .work-pls {
+      position: relative;
+    }
+  
+    .location-content {
+      position: absolute;
+      width: 324px;
+      left: 60px;
+      top: 33px;
+    }
+  
+    .map-icon-img {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      left: 13px;
+      top: 43px;
+    }
+  
+    .location-content p {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+    .location-content h5 {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 15px;
+      line-height: 0.75;
+    }
+  
+    .contact-telephone-img-div {
+      position: absolute;
+      width: 23px;
+      height: 21px;
+    }
+  
+    .contact-whatsapp-img-div img {
+      position: absolute;
+      width: 23px;
+      height: 22px;
+      top: 73px;
+      left: 22px;
+    }
+  
+    .contact-telephone-img-div img {
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      top: 34px;
+      left: 22px;
+    }
+  
+    .ivr-number {
+      position: absolute;
+      top: 33px;
+      left: 60px;
+    }
+  
+    .ivr-number h5 {
+      font-size: 15px;
+      font-weight: 400;
+      color: #000000;
+      font-family: "Montserrat", Helvetica;
+    }
+  
+    .second-number {
+      position: absolute;
+      top: 74px;
+      left: 60px;
+    }
+  
+    .second-number h5 {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 400;
+      color: #000;
+      font-size: 15px;
+    }
+  
+    .mail-text {
+      position: absolute;
+      width: 324px;
+      top: 23px;
+      left: 60px;
+    }
+    .mail-text h5 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.4;
+    }
+  
+    #mail-icon {
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 27px;
+      left: 20px;
+    }
+    #mail-icon2 {
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 84px;
+      left: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .mail,
+    .map,
+    .feature-box {
+      height: 130px !important;
+  
+      padding: 0;
+    }
+  
+    .work-pls {
+      position: relative;
+    }
+  
+    .location-content {
+      position: absolute;
+      width: 200px;
+      left: 60px;
+      top: 30px;
+    }
+  
+    .map-icon-img {
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      left: 13px;
+      top: 43px;
+    }
+  
+    .location-content p {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+    .location-content h5 {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 16px;
+      line-height: 0.75;
+    }
+  
+    .contact-telephone-img-div {
+      position: absolute;
+      width: 23px;
+      height: 21px;
+    }
+  
+    .contact-whatsapp-img-div img {
+      position: absolute;
+      width: 23px;
+      height: 22px;
+      top: 73px;
+      left: 22px;
+    }
+  
+    .contact-telephone-img-div img {
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      top: 34px;
+      left: 22px;
+    }
+  
+    .ivr-number {
+      position: absolute;
+      top: 33px;
+      left: 60px;
+    }
+  
+    .ivr-number h5 {
+      font-size: 15px;
+      font-weight: 400;
+      color: #000000;
+      font-family: "Montserrat", Helvetica;
+    }
+  
+    .second-number {
+      position: absolute;
+      top: 74px;
+      left: 60px;
+    }
+  
+    .second-number h5 {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 400;
+      color: #000;
+      font-size: 15px;
+    }
+  
+    .mail-text {
+      position: absolute;
+      width: 200px;
+      top: 25px;
+      left: 60px;
+    }
+    .mail-text h5 {
+      font-size: 14px;
+      font-weight: 400;
+      color: #000000;
+      line-height: 1.4;
+    }
+  
+    #mail-icon {
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 27px;
+      left: 20px;
+    }
+    #mail-icon2 {
+      position: absolute;
+      width: 25px;
+      height: 24px;
+      top: 84px;
+      left: 20px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .work-pls {
+      position: relative;
+    }
+  
+    .location-content {
+      margin-left: 140px;
+      margin-top: -2px;
+    }
+  
+    .map-icon-img {
+      position: absolute;
+      width: 52px;
+      height: 54px;
+      top: 67px;
+      left: 80px;
+    }
+  
+    .location-content p {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+    .location-content h5 {
+      font-family: "Montserrat", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+  
+    .contact-telephone-img-div {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 41px;
+      left: 111px;
+    }
+  
+    .contact-whatsapp-img-div {
+      position: absolute;
+      top: 101px;
+      left: 111px;
+    }
+  
+    .contact-telephone-img-div img {
+      width: 38px;
+      height: 33px;
+    }
+  
+    .ivr-number {
+      position: absolute;
+      top: 47px;
+      left: 160px;
+      font-family: "Montserrat", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+  
+    .second-number {
+      position: absolute;
+      top: 107px;
+      left: 160px;
+      font-family: "Montserrat", Helvetica;
+      font-weight: 500;
+      color: #000000;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+  
+    .mail-text {
+      position: absolute;
+      width: 210px;
+      top: 45px;
+      left: 140px;
+    }
+  
+    .mail-text h5 {
+      font-size: 15px;
+      font-weight: 400;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+  
+    #mail-icon {
+      position: absolute;
+      width: 38px;
+      height: 36px;
+      top: 45px;
+      left: 83px;
+    }
+    #mail-icon2 {
+      position: absolute;
+      width: 38px;
+      height: 36px;
+      top: 106px;
+      left: 83px;
+    }
+  }
+  
+
+  /* footer styling */
+  
+  /* footer conditions */
+  .text-muted {
+    color: #dfdfdf !important;
+  }
+  
+  #conditions {
+    font-size: 15px;
+    color: #dfdfdf;
+  }
+  
+  #conditions ul .footer-details {
+    padding: 0px 4px;
+  }
+  
+  .footer-text {
+    display: flex;
+    position: absolute;
+  
+    right: 5%;
+  }
+  
+  #footer {
+    background-color: #212121;
+    /* position: fixed; */
+    margin: 0;
+  }
+  
+  #footer .container-fluid {
+    padding: 0.625rem;
+    display: flex;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  #footer a {
+    margin: 0 3px;
+    color: #dfdfdf;
+  }
+  
+  footer #copyright-text {
+    color: #dfdfdf;
+    font-size: 1.1rem; /* ie around 20px*/
+    font-size: 16px;
+  }
+  
+  footer .all-rights-line {
+    display: inline;
+    font-size: 16px;
+    color: #dfdfdf;
+    margin-left: 10px;
+  }
+  
+  .footer-logos {
+    margin-left: 1%;
+  }
+  
+  @media (max-width: 768px) {
+    #footer .container-fluid {
+      padding: 0.625rem;
+      display: flex;
+      position: relative;
+      padding-bottom: 60px;
+    }
+  
+    #footer > .container-fluid {
+      display: block;
+      position: relative;
+    }
+    #footer .footer-logos {
+      display: flex;
+      justify-content: center;
+    }
+    #footer #copyright-text {
+      margin-top: 3px;
+      position: absolute;
+      font-size: 14px;
+    }
+  
+    #footer .all-rights-line {
+      position: absolute;
+      font-size: 14px;
+      top: 60px;
+    }
+  
+    .footer-text {
+      position: static;
+      justify-content: center;
+    }
+  
+    .text-muted {
+      color: #dfdfdf !important;
+    }
+  
+    #conditions {
+      font-size: 15px;
+      color: #dfdfdf;
+  
+    }
+  
+    #conditions ul .footer-details {
+      padding: 0px 4px;
+    }
+  }
+  
