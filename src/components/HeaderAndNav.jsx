@@ -3,6 +3,7 @@ import telephoneIcon from "../assets/icons/telephone.png";
 import whatsappIcon from "../assets/icons/whatsapp.png";
 import emailIcon from "../assets/icons/email.png";
 import Navbar_brand_icon from "../assets/icons/main-icon.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -78,8 +79,10 @@ export default function Header() {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="pages/about.html" id="">
-                      About
+                    <a>
+                      <Link className="nav-link" to="/AboutPage">
+                        About
+                      </Link>
                     </a>
                   </li>
 
@@ -125,8 +128,10 @@ export default function Header() {
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="pages/career.html" id="">
-                      Careers
+                    <a>
+                      <Link className="nav-link" to="/Careers">
+                        Careers
+                      </Link>
                     </a>
                   </li>
                   <li className="nav-item contact-nav">
@@ -223,17 +228,18 @@ export default function Header() {
               <hr />
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                aria-current="page"
-                href="pages/career.html">
-                Careers
+              <a>
+                <Link className="nav-link" to="/Careers">
+                  Careers
+                </Link>
               </a>
               <hr />
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="pages/about.html">
-                About Us
+              <a>
+                <Link className="nav-link" to="/AboutPage">
+                  About
+                </Link>
               </a>
               <hr />
             </li>
