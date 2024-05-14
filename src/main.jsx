@@ -3,32 +3,33 @@ import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import App from "./App.jsx";
-import PropTypes from "prop-types";
 import "./index.css";
 import Profile from "./components/Profile.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HeaderAndNav from "./components/HeaderAndNav.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import Careers from "./pages/Careers.jsx";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App />,
-//   },
-//   {
-//     path: "./components/profile",
-//     element: <Profile />,
-//   },
-// ]);
-
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     <RouterProvider router={router} />
-//     <App />
-//   </React.StrictMode>
-// );
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "Profile",
+    element: <Profile />,
+  },
+  {
+    path: "AboutPage",
+    element: <AboutPage />,
+  },
+  {
+    path: "Careers",
+    element: <Careers />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
