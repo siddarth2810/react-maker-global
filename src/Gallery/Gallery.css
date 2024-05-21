@@ -1,0 +1,66 @@
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css");
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css");
+@import url("https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.image-box img {
+  max-width: 280px;
+  padding: 0 3px 3px 3px;
+}
+
+/* App.css */
+
+.Gallery-container {
+  padding: 5px;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.categories-box h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #343a40;
+}
+
+.categories-item-box {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.categories-item-box li {
+  margin: 5px 10px;
+  padding: 10px 10px;
+  cursor: pointer;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  color: #6c757d;
+  transition: all 0.3s ease;
+}
+
+.categories-item-box li.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  color: tomato;
+}
+
+@media (max-width: 768px) {
+  .categories-item-box li {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

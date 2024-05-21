@@ -4,22 +4,9 @@ import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import founderImage from "../assets/images/founder.jpg";
 import { Link } from "react-router-dom";
+import "./styles/AboutPage.css";
 
 const AboutPage = () => {
-  //for hiding top header on scroll down
-  let prevScrollPos = window.scrollY;
-  window.onscroll = function () {
-    const topHeader = document.getElementById("TopHeader");
-    const Header = document.getElementById("header-container");
-    const currentScrollPos = window.scrollY;
-
-    if (prevScrollPos < currentScrollPos) {
-      topHeader.style.display = "none";
-    } else if (currentScrollPos === 0) {
-      topHeader.style.display = "flex";
-    }
-    prevScrollPos = currentScrollPos;
-  };
   return (
     <>
       <HeaderAndNav />
@@ -143,10 +130,6 @@ const AboutPage = () => {
 
       <ContactUs />
       <Footer />
-
-      <div>
-        <p></p>
-      </div>
     </>
   );
 };

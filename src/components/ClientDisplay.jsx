@@ -2,6 +2,7 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Link } from "react-router-dom";
 
 // Importing images
 
@@ -34,39 +35,47 @@ import client19 from "../assets/Client logos/19.png";
 import client20 from "../assets/Client logos/20.png";
 import client21 from "../assets/Client logos/21.png";
 
-import industries1 from "../assets/industries-we-serve/1.png";
-import industries2 from "../assets/industries-we-serve/2.png";
-import industries3 from "../assets/industries-we-serve/3.png";
-import industries4 from "../assets/industries-we-serve/4.png";
-import industries5 from "../assets/industries-we-serve/5.png";
-import industries6 from "../assets/industries-we-serve/6.png";
-import industries7 from "../assets/industries-we-serve/7.png";
-import industries8 from "../assets/industries-we-serve/8.png";
+import AerospaceImageAtHomePage from "../assets/industries-we-serve/Aerospace.png";
+import AutomotiveImageAtHomePage from "../assets/industries-we-serve/Automotive.png";
+import ArchitectureImageAtHomePage from "../assets/industries-we-serve/Architecture.png";
+import MoviesImageAtHomePage from "../assets/industries-we-serve/Movies.png";
+import JewelleryImageAtHomePage from "../assets/industries-we-serve/Jewellery.png";
+import ManufacturingImageAtHomePage from "../assets/industries-we-serve/Manufacturing.png";
+import DentalImageAtHomePage from "../assets/industries-we-serve/Dental.png";
+import OilAndGasImageAtHomePage from "../assets/industries-we-serve/OilAndGas.png";
 
 const industries = [
   {
-    imgSrc: industries1,
+    imgSrc: AerospaceImageAtHomePage,
+    destination: "/Aerospace",
   },
   {
-    imgSrc: industries2,
+    imgSrc: ArchitectureImageAtHomePage,
+    destination: "/Architecture",
   },
   {
-    imgSrc: industries3,
+    imgSrc: AutomotiveImageAtHomePage,
+    destination: "/Automotive",
   },
   {
-    imgSrc: industries4,
+    imgSrc: JewelleryImageAtHomePage,
+    destination: "/Jewellery",
   },
   {
-    imgSrc: industries5,
+    imgSrc: DentalImageAtHomePage,
+    destination: "/Dental",
   },
   {
-    imgSrc: industries6,
+    imgSrc: ManufacturingImageAtHomePage,
+    destination: "/Manufacturing",
   },
   {
-    imgSrc: industries7,
+    imgSrc: MoviesImageAtHomePage,
+    destination: "/Movies",
   },
   {
-    imgSrc: industries8,
+    imgSrc: OilAndGasImageAtHomePage,
+    destination: "/OilAndGas",
   },
 ];
 
@@ -141,7 +150,7 @@ export default function ClientDisplay() {
     <>
       <section id="portfolio">
         <div className="container">
-          <div className="container section-heading color-line">
+          <div className="container section-heading">
             <h1 id="section-title">OUR CLIENTS</h1>
           </div>
 
@@ -222,7 +231,9 @@ export default function ClientDisplay() {
               }}>
               {industries.map((item) => (
                 <div>
-                  <img src={item.imgSrc} className="industry-logo" />
+                  <Link to={item.destination}>
+                    <img src={item.imgSrc} className="industry-logo" />
+                  </Link>
                 </div>
               ))}
             </OwlCarousel>
