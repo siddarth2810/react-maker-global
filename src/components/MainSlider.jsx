@@ -106,9 +106,9 @@ export default function MainSlider() {
               </strong>
             </p>
             <button className="btn btn-primary" id="Read-more-btn">
-              {/* <a href="pages/about.html" target="_blank"> */}
-              <span> READ MORE ... </span>
-              {/* </a> */}
+              <a href="/AboutPage" target="_blank">
+                <span> READ MORE ... </span>
+              </a>
             </button>
           </div>
         </div>
