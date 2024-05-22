@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HeaderAndNav from "./components/HeaderAndNav";
 import "./App.css";
 import RenderName from "./components/RenderName";

@@ -4,7 +4,6 @@ import whatsappIcon from "../assets/icons/whatsapp.png";
 import emailIcon from "../assets/icons/email.png";
 import Navbar_brand_icon from "../assets/icons/main-icon.png";
 import { Link } from "react-router-dom";
-
 export default function Header() {
   return (
     <>
@@ -45,8 +44,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* {  navigation bar } */}
-
         <section className="navigation-section" id="title" data-scroll>
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-dark" id="barnav">
@@ -55,37 +52,37 @@ export default function Header() {
                 className="MainLogo"
                 alt="makerglobal-company-logo"
               />
-              <a className="navbar-brand" href="#">
-                {" "}
-                MAKER GLOBAL{" "}
-              </a>
+              <Link className="navbar-brand" to="/">
+                MAKER GLOBAL
+              </Link>
               <button
-                className="navbar-toggler d-lg-none"
+                className="navbar-toggler"
                 type="button"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar"
-                aria-controls="offcanvasDarkNavbar"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
                 aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
-
               <div
                 className="collapse navbar-collapse d-none d-lg-flex"
-                id="navbarSupportedContent">
+                id="navbarNav">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <a className="nav-link" href="index.html" id="">
+                    <Link className="nav-link" to="/">
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a>
-                      <Link className="nav-link" to="/AboutPage">
-                        About
-                      </Link>
-                    </a>
+                    <Link className="nav-link" to="/Gallery">
+                      Gallery
+                    </Link>
                   </li>
-
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/AboutPage">
+                      About
+                    </Link>
+                  </li>
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -97,163 +94,145 @@ export default function Header() {
                     </a>
                     <ul className="dropdown-menu">
                       <li>
-                        <a
-                          className="dropdown-item"
-                          href="pages/rapid-prototyping.html">
+                        <Link className="dropdown-item" to="/RapidPrototyping">
                           Rapid Prototyping
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          className="dropdown-item"
-                          href="pages/3d-printers.html">
+                        <Link className="dropdown-item" to="/threeDPrinting">
                           3D Printers
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <a
                           className="dropdown-item"
                           href="pdf/SCALE MODELS.pdf"
-                          target="_blank">
+                          target="_blank"
+                          rel="noopener noreferrer">
                           Scale Models
                         </a>
                       </li>
                       <li>
-                        <a
-                          className="dropdown-item"
-                          href="pages/metal-3d-printing.html">
+                        <Link className="dropdown-item" to="/MetalPrinting">
                           Metal 3D Printing
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a>
-                      <Link className="nav-link" to="/Careers">
-                        Careers
-                      </Link>
-                    </a>
+                    <Link className="nav-link" to="/Careers">
+                      Careers
+                    </Link>
                   </li>
                   <li className="nav-item contact-nav">
-                    <a className="nav-link" href="#features" id="">
+                    <a className="nav-link" href="#features">
                       Contact Us
                     </a>
                   </li>
                 </ul>
               </div>
-
-              {/* nav items end */}
             </nav>
           </div>
-          {/* container tag end */}
-        </section>
-      </header>
 
-      {/* sidebar start */}
+          {/* sidebar start */}
 
-      <div
-        className="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="offcanvasDarkNavbar"
-        aria-labelledby="offcanvasDarkNavbarLabel">
-        <div className="offcanvas-header">
-          <div className="sidebar-brand">
-            <img
-              src={Navbar_brand_icon}
-              className="MainLogo"
-              alt="makerglobal-company-logo"
-            />
-            <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-              Maker Global
-            </h5>
-          </div>
-
-          <button
-            type="button"
-            className="btn-close btn-close-white"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"></button>
-        </div>
-        <div className="offcanvas-body">
-          <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+          <div
+            className="offcanvas offcanvas-end"
+            tabIndex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div className="offcanvas-header">
+              <img
+                src={Navbar_brand_icon}
+                className="MainLogo"
+                alt="makerglobal-company-logo"
+              />
+              <a className="nav-link" href="/">
+                Maker Global
               </a>
-              <hr />
-            </li>
-
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Our Offerings
-              </a>
-              <ul className="dropdown-menu dropdown-menu-dark">
-                <li>
+              <button
+                style={{
+                  backgroundColor: "e7e7e7",
+                }}
+                type="button"
+                className="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div className="offcanvas-body">
+              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/Gallery">
+                    Gallery
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/AboutPage">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
                   <a
-                    className="dropdown-item"
-                    href="pages/rapid-prototyping.html">
-                    Rapid Prototyping
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="offcanvasNavbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Our Offerings
+                  </a>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="offcanvasNavbarDropdown">
+                    <li>
+                      <a className="nav-link" href="/RapidPrototyping">
+                        Rapid Prototyping
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/threeDPrinting">
+                        3D Printers
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        href="pdf/SCALE MODELS.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Scale Models
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="/MetalPrinting">
+                        Metal 3D Printing
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/Careers">
+                    Careers
                   </a>
                 </li>
-                <li>
-                  <a className="dropdown-item" href="pages/3d-printers.html">
-                    3D Printers
-                  </a>
-                </li>
-                <li>
+                <li className="nav-item ">
                   <a
-                    className="dropdown-item"
-                    href="pdf/SCALE MODELS.pdf"
-                    target="_blank">
-                    Scale Models
+                    className="nav-link "
+                    href="#features"
+                    style={{ color: "#7bc74d " }}>
+                    Contact Us
                   </a>
-                </li>
-                <li>
-                  <a
-                    className="dropdown-item"
-                    href="pages/metal-3d-printing.html">
-                    Metal 3D Printing
-                  </a>
-                </li>
-
-                <li>
-                  <hr className="dropdown-divider" />
                 </li>
               </ul>
-              <hr />
-            </li>
-            <li className="nav-item">
-              <a>
-                <Link className="nav-link" to="/Careers">
-                  Careers
-                </Link>
-              </a>
-              <hr />
-            </li>
-            <li className="nav-item">
-              <a>
-                <Link className="nav-link" to="/AboutPage">
-                  About
-                </Link>
-              </a>
-              <hr />
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link contact-sidebar" href="#features">
-                Contact Us
-              </a>
-            </li>
-          </ul>
-        </div>
-        {/* sidebar items end */}
-      </div>
-      {/* sidebar end */}
+            </div>
+          </div>
+        </section>
+      </header>
     </>
   );
 }

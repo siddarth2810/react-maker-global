@@ -3,35 +3,19 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import { Link } from "react-router-dom";
+import Career1 from "../assets/images/career1.webp";
+import Career2 from "../assets/images/career2.webp";
 
 const Careers = () => {
-  //for hiding top header on scroll down
-  let prevScrollPos = window.scrollY;
-  window.onscroll = function () {
-    const topHeader = document.getElementById("TopHeader");
-    const Header = document.getElementById("header-container");
-    const currentScrollPos = window.scrollY;
-
-    if (prevScrollPos < currentScrollPos) {
-      topHeader.style.display = "none";
-    } else if (currentScrollPos === 0) {
-      topHeader.style.display = "flex";
-    }
-    prevScrollPos = currentScrollPos;
-  };
   return (
     <>
-      {/* <HeaderAndNav />
-
-      <ContactUs />
-      <Footer /> */}
-
-      <div>
-        <p>
-          {" "}
-          <Link to="/">Home page</Link>
-        </p>
+      <HeaderAndNav />
+      <div className="career-container">
+        <img src={Career1} height="100%" width="100%" />
+        <img src={Career2} height="100%" width="100%" id="career-image2" />
       </div>
+      <ContactUs />
+      <Footer />
     </>
   );
 };

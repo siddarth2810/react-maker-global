@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import linkedinIcon from "../assets/icons/linkedin.png";
 import youtubeIcon from "../assets/icons/youtube.png";
@@ -6,7 +8,18 @@ import instaIcon from "../assets/icons/insta1.png";
 import facebookIcon from "../assets/icons/facebook.png";
 import twitterIcon from "../assets/icons/twitter.png";
 
+// Component to scroll to the top on navigation
+
 export default function Footer() {
+  const ScrollToTopOnMount = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
+    return null;
+  };
+  ScrollToTopOnMount();
+
   return (
     <>
       <footer id="footer">
@@ -17,26 +30,29 @@ export default function Footer() {
                 <h5 className="mt-2 text-white-50">
                   <small>Offerings</small>
                 </h5>
-                <a
+
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="pages/rapid-prototyping.html">
-                  Rapid prototyping
-                </a>
-                <a
+                  to="/RapidPrototyping">
+                  Rapid Prototyping
+                </Link>
+
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="pages/3d-printers.html">
-                  3d printers
-                </a>
+                  to="/ThreeDPrinting">
+                  3D Printers
+                </Link>
+
                 <a
                   className="small p-0 my-1 nav-link link-secondary"
                   href="pdf/SCALE MODELS.pdf">
                   Scale Models
                 </a>
-                <a
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="pages/metal-3d-printing.html">
-                  Metal 3d printing
-                </a>
+                  to="/MetalPrinting">
+                  Metal 3D Printing
+                </Link>
               </div>
             </div>
             <div className="col-lg-3 col-6">
@@ -44,26 +60,26 @@ export default function Footer() {
                 <h5 className="mt-2 text-white-50">
                   <small>Legal</small>
                 </h5>
-                <a
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="footer-pages/privacy_policy.html">
+                  to="/PrivacyPolicy">
                   Privacy Policy
-                </a>
-                <a
+                </Link>
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="footer-pages/terms_and_conditions.html">
-                  Terms and conditions
-                </a>
-                <a
+                  to="/TermsAndConditions">
+                  Terms And Conditions
+                </Link>
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="footer-pages/cancellation_refund.html">
-                  Cancellation and refund
-                </a>
-                <a
+                  to="/Cancel">
+                  Cancellation and Refund
+                </Link>
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="footer-pages/shipping_and_delivery.html">
-                  Shipping and delivery
-                </a>
+                  to="/Shipping">
+                  Shipping And Delivery
+                </Link>
               </div>
             </div>
             <div className="col-lg-3 col-6">
@@ -71,16 +87,16 @@ export default function Footer() {
                 <h5 className="mt-2 text-white-50">
                   <small>Company</small>
                 </h5>
-                <a
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="pages/career.html">
+                  to="/Careers">
                   Careers
-                </a>
-                <a
+                </Link>
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="pages/about.html">
+                  to="/AboutPage">
                   About Us
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-3 col-6">
