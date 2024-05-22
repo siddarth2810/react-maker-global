@@ -30,6 +30,20 @@ import VaccumCasting from "./Card_pages/VaccumCasting.jsx";
 import CAD from "./Card_pages/CAD.jsx";
 import Gallery from "./Gallery/Gallery.jsx";
 
+let prevScrollPos = window.scrollY;
+window.onscroll = function () {
+  const topHeader = document.getElementById("TopHeader");
+  const Header = document.getElementById("header-container");
+  const currentScrollPos = window.scrollY;
+
+  if (prevScrollPos < currentScrollPos) {
+    topHeader.style.display = "none";
+  } else if (currentScrollPos === 0) {
+    topHeader.style.display = "flex";
+  }
+  prevScrollPos = currentScrollPos;
+};
+
 const router = createBrowserRouter([
   {
     path: "/",

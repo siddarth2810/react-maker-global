@@ -229,6 +229,40 @@ header {
   }
 }
 
+/* styling the sidebar */
+
+.btn-close {
+  color: #fff;
+  background-color: #7bc74d;
+}
+
+#offcanvasNavbar {
+  background-color: #000;
+  color: #fff;
+  width: 72%;
+  font-weight: 600;
+}
+
+.sidebar-brand {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+hr {
+  margin: 0;
+}
+
+.offcanvas-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.dropdown-menu-dark {
+  background-color: #212121;
+  color: #fff;
+}
+
 /* body is given some margin so that it wont be covered in the header */
 body {
   font-family: "Montserrat", sans-serif;

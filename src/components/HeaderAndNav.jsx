@@ -134,6 +134,8 @@ export default function Header() {
             </nav>
           </div>
 
+          {/* sidebar start */}
+
           <div
             className="offcanvas offcanvas-end"
             tabIndex="-1"
@@ -145,9 +147,9 @@ export default function Header() {
                 className="MainLogo"
                 alt="makerglobal-company-logo"
               />
-              <Link className="navbar-brand" to="/">
+              <a className="nav-link" href="/">
                 Maker Global
-              </Link>
+              </a>
               <button
                 style={{
                   backgroundColor: "e7e7e7",
@@ -160,19 +162,19 @@ export default function Header() {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <a className="nav-link" href="/">
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Gallery">
+                  <a className="nav-link" href="/Gallery">
                     Gallery
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/AboutPage">
+                  <a className="nav-link" href="/AboutPage">
                     About
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item dropdown">
                   <a
@@ -188,14 +190,14 @@ export default function Header() {
                     className="dropdown-menu"
                     aria-labelledby="offcanvasNavbarDropdown">
                     <li>
-                      <Link className="dropdown-item" to="/RapidPrototyping">
+                      <a className="nav-link" href="/RapidPrototyping">
                         Rapid Prototyping
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/threeDPrinting">
+                      <a className="dropdown-item" href="/threeDPrinting">
                         3D Printers
-                      </Link>
+                      </a>
                     </li>
                     <li>
                       <a
@@ -207,16 +209,16 @@ export default function Header() {
                       </a>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/MetalPrinting">
+                      <a className="dropdown-item" href="/MetalPrinting">
                         Metal 3D Printing
-                      </Link>
+                      </a>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/Careers">
+                  <a className="nav-link" href="/Careers">
                     Careers
-                  </Link>
+                  </a>
                 </li>
                 <li className="nav-item ">
                   <a

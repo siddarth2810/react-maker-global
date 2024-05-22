@@ -13,7 +13,7 @@ import {
 } from "@uploadcare/rest-client";
 import "./Gallery.css";
 
-import Footer from "../components/Footer";
+import { ClipLoader } from "react-spinners";
 import HeaderAndNav from "../components/HeaderAndNav";
 
 function Gallery() {
@@ -23,6 +23,8 @@ function Gallery() {
 
   const [imageObject, setImageObject] = useState([]);
   const [filteredImages, setFilteredImages] = useState([]);
+  const [loading, setLoading] = useState(true); // Loading state
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,17 +40,20 @@ function Gallery() {
         );
         setImageObject(result.results);
         setFilteredImages(result.results); // Initially, filteredImages is the same as imageObject
+        setLoading(false); // Set loading to false
       } catch (error) {
         console.log(error);
+        setLoading(false); // Set loading to false
       }
     };
     fetchData();
   }, []);
 
-  const categories = ["architecture", "scalemodels", "All", "Transportation"];
+  const categories = ["All", "architecture", "scalemodels", "Transportation"];
 
   const getCategoryImages = (e) => {
     const category = e.target.innerText;
+    setSelectedCategory(category);
     if (category == "All") {
       setFilteredImages(imageObject); // If the category is "All", show all images
 
@@ -66,42 +71,49 @@ function Gallery() {
       <HeaderAndNav />
       <div className="Gallery-container">
         <div className="Gallery-containercategories-box">
-          <h1>Categories</h1>
           <ul className="categories-item-box">
             {categories.map((category, index) => (
-              <li key={index} onClick={getCategoryImages}>
+              <li
+                key={index}
+                onClick={getCategoryImages}
+                className={category === selectedCategory ? "selected" : ""}>
                 {category}
               </li>
             ))}
           </ul>
         </div>
-        <div className="image-box container-fluid">
-          <LightGallery
-            onInit={onInit}
-            speed={500}
-            plugins={[lgThumbnail, lgZoom]}
-            thumbnail={true}
-            galleryId={"nature"}>
-            {filteredImages
-              .slice()
-              .reverse()
-              .map((image, index) => (
-                <a
-                  key={index}
-                  className="gallery__item"
-                  data-src={image.originalFileUrl}>
-                  <img
-                    className="img-responsive"
-                    src={image.originalFileUrl}
-                    alt={`Image ${image.originalFilename}`}
-                  />
-                </a>
-              ))}
-          </LightGallery>
-        </div>
-      </div>
 
-      <Footer />
+        {loading ? ( // Conditional rendering based on loading state
+          <div className="spinner-container">
+            <ClipLoader size={50} color={"#007bff"} loading={loading} />
+          </div>
+        ) : (
+          <div className="image-box">
+            <LightGallery
+              onInit={() => console.log("lightGallery has been initialized")}
+              speed={500}
+              plugins={[lgThumbnail, lgZoom]}
+              thumbnail={true}
+              galleryId={"nature"}>
+              {filteredImages
+                .slice()
+                .reverse()
+                .map((image, index) => (
+                  <a
+                    key={index}
+                    className="gallery-item"
+                    data-src={image.originalFileUrl}>
+                    <img
+                      className="img-responsive"
+                      src={image.originalFileUrl}
+                      alt={`Image ${image.originalFilename}`}
+                    />
+                  </a>
+                ))}
+            </LightGallery>
+          </div>
+        )}
+      </div>
     </>
   );
 }
