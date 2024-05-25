@@ -13,6 +13,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.18",
+    "@mui/material": "^5.15.18",
     "@uploadcare/blocks": "^0.40.0",
     "@uploadcare/rest-client": "^6.14.1",
     "bootstrap": "^5.3.2",
@@ -26,7 +30,8 @@
     "react-native-view-overflow": "^0.0.5",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.23.1",
-    "react-spinners": "^0.13.8"
+    "react-spinners": "^0.13.8",
+    "swiper": "^11.1.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

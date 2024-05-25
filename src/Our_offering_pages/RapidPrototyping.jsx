@@ -5,6 +5,7 @@ import React from "react";
 import printing1 from "../assets/images/3dprinting-1.webp";
 import printing2 from "../assets/images/3dprinting-2.webp";
 import printing3 from "../assets/images/3dprinting-3.webp";
+import FloatingButtons from "../components/FloatingButtons";
 
 const RapidPrototyping = () => {
   return (
@@ -31,6 +32,7 @@ const RapidPrototyping = () => {
         />
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

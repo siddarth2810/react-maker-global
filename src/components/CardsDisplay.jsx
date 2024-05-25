@@ -25,6 +25,7 @@ const firstRow = [
   {
     imgSrc: offering3,
     title: "Scale Models",
+    destination: "/ScaleModels",
   },
   {
     imgSrc: offering4,
@@ -66,25 +67,25 @@ export default function CardsDisplay() {
       <div className="row" id="offerings-first-row">
         {/* // generating the cards using the map function */}
         {firstRow.map((item) => (
-          <Link to={item.destination} className="col-lg-3 col-6">
+          <a href={item.destination} className="col-lg-3 col-6">
             <CardComponent
               className="cardComponent"
               imgSrc={item.imgSrc}
               title={item.title}
             />
-          </Link>
+          </a>
         ))}
       </div>
 
       <div className="row" id="offerings-first-row">
         {secondRow.map((item) => (
-          <Link to={item.destination} className="col-lg-3 col-6">
+          <a href={item.destination} className="col-lg-3 col-6">
             <CardComponent
               className="cardComponent"
               imgSrc={item.imgSrc}
               title={item.title}
             />
-          </Link>
+          </a>
         ))}
       </div>
     </div>

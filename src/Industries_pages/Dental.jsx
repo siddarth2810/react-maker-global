@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import DentalImage from "../assets/images/Dental.png";
+import FloatingButtons from "../components/FloatingButtons";
 
 const Dental = () => {
   return (
@@ -68,6 +69,7 @@ const Dental = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@ import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import Manprotto from "../assets/images/3dPrinterPage.webp";
 import downlaodBrochure from "../assets/images/download_brochure.webp";
+import FloatingButtons from "../components/FloatingButtons";
 
 const threeDPrinting = () => {
   return (
@@ -14,6 +15,7 @@ const threeDPrinting = () => {
         <img src={downlaodBrochure} id="manprotto-downloadIcon" />
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

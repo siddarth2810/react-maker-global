@@ -69,20 +69,21 @@ export default function Header() {
                 id="navbarNav">
                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                    <Link className="nav-link" to="/">
-                      Home
-                    </Link>
-                  </li>
-                  <li className="nav-item">
                     <Link className="nav-link" to="/Gallery">
                       Gallery
                     </Link>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="/RamLalla6">
+                      Shop
+                    </a>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/AboutPage">
                       About
                     </Link>
                   </li>
+
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -169,6 +170,11 @@ export default function Header() {
                 <li className="nav-item">
                   <a className="nav-link" href="/Gallery">
                     Gallery
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/RamLalla6">
+                    Shop
                   </a>
                 </li>
                 <li className="nav-item">

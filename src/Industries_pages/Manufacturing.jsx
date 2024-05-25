@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import ManufacturingImage from "../assets/images/Manufacturing.png";
+import FloatingButtons from "../components/FloatingButtons";
 
 const Manufacturing = () => {
   return (
@@ -67,6 +68,7 @@ const Manufacturing = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

@@ -8,6 +8,7 @@ import CardsDisplay from "./components/CardsDisplay";
 import ClientDisplay from "./components/ClientDisplay";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import FloatingButtons from "./components/FloatingButtons";
 
 function App() {
   //for hiding top header on scroll down
@@ -33,6 +34,7 @@ function App() {
       <MainSlider />
       <CardsDisplay />
       <ClientDisplay />
+      <FloatingButtons />
       <ContactUs />
       <Footer />
     </>

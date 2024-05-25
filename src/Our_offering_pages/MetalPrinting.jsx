@@ -4,6 +4,7 @@ import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import metalPrint from "../assets/images/metal-print.webp";
 import { ScrollRestoration } from "react-router-dom";
+import FloatingButtons from "../components/FloatingButtons";
 
 const MetalPrinting = () => {
   return (
@@ -17,6 +18,7 @@ const MetalPrinting = () => {
           id="metal-3d-image"
         />
       </div>
+      <FloatingButtons />
       <ContactUs />
       <Footer />
     </>

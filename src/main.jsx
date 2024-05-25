@@ -29,6 +29,10 @@ import ReverseEngineering from "./Card_pages/ReverseEngineering.jsx";
 import VaccumCasting from "./Card_pages/VaccumCasting.jsx";
 import CAD from "./Card_pages/CAD.jsx";
 import Gallery from "./Gallery/Gallery.jsx";
+import RamLalla6 from "./Shop_pages/RamLalla6.jsx";
+import RamLalla9 from "./Shop_pages/RamLalla9.jsx";
+import ScaleModels from "./Our_offering_pages/ScaleModels.jsx";
+import FloatingButtons from "./components/FloatingButtons.jsx";
 
 let prevScrollPos = window.scrollY;
 window.onscroll = function () {
@@ -145,6 +149,18 @@ const router = createBrowserRouter([
   {
     path: "Gallery",
     element: <Gallery />,
+  },
+  {
+    path: "RamLalla6",
+    element: <RamLalla6 />,
+  },
+  {
+    path: "RamLalla9",
+    element: <RamLalla9 />,
+  },
+  {
+    path: "ScaleModels",
+    element: <ScaleModels />,
   },
 ]);
 

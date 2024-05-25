@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import MoviesImage from "../assets/images/Movies.png";
+import FloatingButtons from "../components/FloatingButtons";
 
 const Movies = () => {
   return (
@@ -67,6 +68,7 @@ const Movies = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

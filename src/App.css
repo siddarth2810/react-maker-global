@@ -1192,3 +1192,47 @@ div #manprotto-downloadIcon:hover {
   position: relative;
   text-decoration: underline #7bc74d;
 }
+
+/* the z index componenets*/
+
+.float1 {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+}
+.float-image {
+  width: 120px;
+  height: 50px;
+  box-shadow: 2px 2px 3px #999;
+}
+
+@media (min-width: 768px) {
+  .float-image {
+    width: 140px;
+    height: 60px;
+    box-shadow: 2px 2px 3px #999;
+  }
+
+  .float1 {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.my-float {
+  margin-top: 12px;
+}
+
+.float2 {
+  position: fixed;
+  bottom: 90px; /* Adjust the position as needed */
+  right: 15px; /* Adjust the position as needed */
+  z-index: 100;
+}

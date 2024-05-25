@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import ArchitectureImage from "../assets/images/Archi.png";
-
+import FloatingButtons from "../components/FloatingButtons";
 const Architecture = () => {
   return (
     <>
@@ -70,6 +70,7 @@ const Architecture = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );
