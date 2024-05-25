@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import AutomotiveImage from "../assets/images/Automotive.png";
+import FloatingButtons from "../components/FloatingButtons";
 
 const Automotive = () => {
   return (
@@ -72,6 +73,7 @@ const Automotive = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

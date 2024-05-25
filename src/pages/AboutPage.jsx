@@ -5,6 +5,7 @@ import React from "react";
 import founderImage from "../assets/images/founder.jpg";
 import { Link } from "react-router-dom";
 import "./styles/AboutPage.css";
+import FloatingButtons from "../components/FloatingButtons";
 
 const AboutPage = () => {
   return (
@@ -127,7 +128,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
+      <FloatingButtons />
       <ContactUs />
       <Footer />
     </>

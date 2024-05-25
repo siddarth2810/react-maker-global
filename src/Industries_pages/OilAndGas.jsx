@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import OilAndGasImage from "../assets/images/OilAndGas.png";
+import FloatingButtons from "../components/FloatingButtons";
 
 const OilAndGas = () => {
   return (
@@ -65,6 +66,7 @@ const OilAndGas = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

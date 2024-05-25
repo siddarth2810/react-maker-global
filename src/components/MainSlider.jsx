@@ -27,18 +27,26 @@ export default function MainSlider() {
           dots={false}
           margin={0}>
           <div>
-            <img className="img" src={slide1} />
+            <a href="/AboutPage">
+              <img className="img" src={slide1} />
+            </a>
           </div>
           <div>
-            <video width="100%" muted autoPlay playsInline loop>
-              <source src={video1} type="video/webm" />
-            </video>
+            <a href="/RapidPrototyping">
+              <video width="100%" muted autoPlay playsInline loop>
+                <source src={video1} type="video/webm" />
+              </video>
+            </a>
           </div>
           <div>
-            <img className="img" src={slide3} />
+            <a href="/threeDPrinting">
+              <img className="img" src={slide3} />
+            </a>
           </div>
           <div>
-            <img className="img" src={slide4} />
+            <a href="/RamLalla6">
+              <img className="img" src={slide4} />
+            </a>
           </div>
         </OwlCarousel>
       </div>
@@ -54,18 +62,26 @@ export default function MainSlider() {
           dots
           margin={15}>
           <div>
-            <img className="img" src={mobileSlide1} />
+            <a href="/AboutPage">
+              <img className="img" src={mobileSlide1} />
+            </a>
           </div>
           <div>
-            <video width="100%" muted autoPlay playsInline loop>
-              <source src={mobileSlideVideo} type="video/webm" />
-            </video>
+            <a href="/RapidPrototyping">
+              <video width="100%" muted autoPlay playsInline loop>
+                <source src={mobileSlideVideo} type="video/webm" />
+              </video>
+            </a>
           </div>
           <div>
-            <img className="img" src={mobileSlide2} />
+            <a href="/threeDPrinting">
+              <img className="img" src={mobileSlide2} />
+            </a>
           </div>
           <div>
-            <img className="img" src={mobileSlide3} />
+            <a href="/RamLalla6">
+              <img className="img" src={mobileSlide3} />
+            </a>
           </div>
         </OwlCarousel>
       </div>

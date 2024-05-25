@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import JewelleryImage from "../assets/images/Jewellery.png";
+import FloatingButtons from "../components/FloatingButtons";
 
 const Jewellery = () => {
   return (
@@ -73,6 +74,7 @@ const Jewellery = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

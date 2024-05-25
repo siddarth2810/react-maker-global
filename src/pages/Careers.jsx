@@ -5,6 +5,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Career1 from "../assets/images/career1.webp";
 import Career2 from "../assets/images/career2.webp";
+import FloatingButtons from "../components/FloatingButtons";
 
 const Careers = () => {
   return (
@@ -15,6 +16,7 @@ const Careers = () => {
         <img src={Career2} height="100%" width="100%" id="career-image2" />
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );

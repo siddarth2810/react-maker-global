@@ -49,18 +49,24 @@ function Gallery() {
     fetchData();
   }, []);
 
-  const categories = ["All", "architecture", "scalemodels", "Transportation"];
+  const categories = ["All", "Architecture", "Scale Models", "Transportation"];
+
+  // Mapping of display names to filename parts
+  const categoryMapping = {
+    Architecture: "architecture",
+    "Scale Models": "scalemodels",
+    Transportation: "transportation",
+  };
 
   const getCategoryImages = (e) => {
     const category = e.target.innerText;
     setSelectedCategory(category);
-    if (category == "All") {
+    if (category === "All") {
       setFilteredImages(imageObject); // If the category is "All", show all images
-
-      return;
     } else {
+      const filenamePart = categoryMapping[category];
       const newFilteredImages = imageObject.filter((image) =>
-        image.originalFilename.includes(category)
+        image.originalFilename.includes(filenamePart)
       );
       setFilteredImages(newFilteredImages); // Update the filteredImages state
     }
@@ -93,6 +99,7 @@ function Gallery() {
               onInit={() => console.log("lightGallery has been initialized")}
               speed={500}
               plugins={[lgThumbnail, lgZoom]}
+              mobileSettings={{ showCloseButton: true }}
               thumbnail={true}
               galleryId={"nature"}>
               {filteredImages
@@ -117,5 +124,4 @@ function Gallery() {
     </>
   );
 }
-
 export default Gallery;

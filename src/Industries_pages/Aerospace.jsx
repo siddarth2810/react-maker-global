@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import HeaderAndNav from "../components/HeaderAndNav";
 import React from "react";
 import AerospaceImage from "../assets/images/Aerospace.png";
-
+import FloatingButtons from "../components/FloatingButtons";
 const Aerospace = () => {
   return (
     <>
@@ -65,6 +65,7 @@ const Aerospace = () => {
         </div>
       </div>
       <ContactUs />
+      <FloatingButtons />
       <Footer />
     </>
   );
