@@ -9,7 +9,8 @@ import offering5 from "../assets/images/offering--5.webp";
 import offering6 from "../assets/images/offering--6.webp";
 import offering7 from "../assets/images/offering--7.webp";
 import offering8 from "../assets/images/offering--8.webp";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import ScrollToTopOnMount from "./ScrollToTopOnMount.jsx";
 
 const firstRow = [
   {
@@ -59,35 +60,39 @@ const secondRow = [
 
 export default function CardsDisplay() {
   return (
-    <div className="container" id="cards-container">
-      <div className="container section-heading ">
-        <h1 id="section-title">OUR OFFERINGS</h1>
-      </div>
+    <>
+      <ScrollToTopOnMount />
+      <Outlet />
+      <div className="container" id="cards-container">
+        <div className="container section-heading ">
+          <h1 id="section-title">OUR OFFERINGS</h1>
+        </div>
 
-      <div className="row" id="offerings-first-row">
-        {/* // generating the cards using the map function */}
-        {firstRow.map((item) => (
-          <a href={item.destination} className="col-lg-3 col-6">
-            <CardComponent
-              className="cardComponent"
-              imgSrc={item.imgSrc}
-              title={item.title}
-            />
-          </a>
-        ))}
-      </div>
+        <div className="row" id="offerings-first-row">
+          {/* // generating the cards using the map function */}
+          {firstRow.map((item) => (
+            <Link to={item.destination} className="col-lg-3 col-6">
+              <CardComponent
+                className="cardComponent"
+                imgSrc={item.imgSrc}
+                title={item.title}
+              />
+            </Link>
+          ))}
+        </div>
 
-      <div className="row" id="offerings-first-row">
-        {secondRow.map((item) => (
-          <a href={item.destination} className="col-lg-3 col-6">
-            <CardComponent
-              className="cardComponent"
-              imgSrc={item.imgSrc}
-              title={item.title}
-            />
-          </a>
-        ))}
+        <div className="row" id="offerings-first-row">
+          {secondRow.map((item) => (
+            <Link to={item.destination} className="col-lg-3 col-6">
+              <CardComponent
+                className="cardComponent"
+                imgSrc={item.imgSrc}
+                title={item.title}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

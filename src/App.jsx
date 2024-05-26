@@ -9,6 +9,7 @@ import ClientDisplay from "./components/ClientDisplay";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
+import ScrollToTopOnMount from "./components/ScrollToTopOnMount";
 
 function App() {
   //for hiding top header on scroll down
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTopOnMount />
       <HeaderAndNav />
       <MainSlider />
       <CardsDisplay />

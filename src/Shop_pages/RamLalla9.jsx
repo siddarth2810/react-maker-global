@@ -3,6 +3,7 @@ import Header from "../components/HeaderAndNav";
 import Footer from "../components/Footer";
 import "./RamLalla.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Reviews from "../assets/images/reviews.png";
 
@@ -106,20 +107,20 @@ const RamLalla9 = () => {
                 <strong>Size:</strong>
               </h5>
               <div className="col-lg-4 mb-2">
-                <a href="/RamLalla6">
+                <Link to="/RamLalla6">
                   <button
                     type="button"
                     className="btn btn-outline-secondary inactive-size-button">
                     6 Inches
                   </button>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="#">
                   <button
                     type="button"
                     className="btn btn-outline-secondary active-size-button">
                     9 inches
                   </button>
-                </a>
+                </Link>
               </div>
 
               <h5 className="mb-3" style={{ padding: "0;" }}>
