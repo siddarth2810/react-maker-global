@@ -148,7 +148,7 @@ export default function Header() {
                 className="MainLogo"
                 alt="makerglobal-company-logo"
               />
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="./">
                 Maker Global
               </a>
               <button
@@ -163,22 +163,22 @@ export default function Header() {
             <div className="offcanvas-body">
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <a className="nav-link" href="./">
                     Home
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/Gallery">
+                  <a className="nav-link" href="./Gallery">
                     Gallery
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/RamLalla6">
+                  <a className="nav-link" href="./RamLalla6">
                     Shop
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/AboutPage">
+                  <a className="nav-link" href="./AboutPage">
                     About
                   </a>
                 </li>

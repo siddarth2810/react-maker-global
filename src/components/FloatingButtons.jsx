@@ -19,7 +19,8 @@ const FloatingButtons = () => {
         className="float2"
         target="_blank"
         id="pdfButton"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        download="Maker_Global_Company_Profile.pdf">
         <img src={icon2} className="float-image" alt="Company Brochure" />
       </a>
     </div>
