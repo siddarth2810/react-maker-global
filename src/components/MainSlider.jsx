@@ -11,6 +11,7 @@ import mobileSlide1 from "../assets/images/mobile-slider1.webp";
 import mobileSlide2 from "../assets/images/mobile-slider2.webp";
 import mobileSlide3 from "../assets/images/mobile-slider3.jpg";
 import mobileSlideVideo from "../assets/images/mobile-slider_1_.webm";
+import { Link } from "react-router-dom";
 
 export default function MainSlider() {
   return (
@@ -27,26 +28,26 @@ export default function MainSlider() {
           dots={false}
           margin={0}>
           <div>
-            <a href="/AboutPage">
+            <Link to="/AboutPage">
               <img className="img" src={slide1} />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/RapidPrototyping">
+            <Link to="/RapidPrototyping">
               <video width="100%" muted autoPlay playsInline loop>
                 <source src={video1} type="video/webm" />
               </video>
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/threeDPrinting">
+            <Link to="/threeDPrinting">
               <img className="img" src={slide3} />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/RamLalla6">
+            <Link to="/RamLalla6">
               <img className="img" src={slide4} />
-            </a>
+            </Link>
           </div>
         </OwlCarousel>
       </div>
@@ -62,26 +63,26 @@ export default function MainSlider() {
           dots
           margin={15}>
           <div>
-            <a href="/AboutPage">
+            <Link to="/AboutPage">
               <img className="img" src={mobileSlide1} />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/RapidPrototyping">
+            <Link to="/RapidPrototyping">
               <video width="100%" muted autoPlay playsInline loop>
                 <source src={mobileSlideVideo} type="video/webm" />
               </video>
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/threeDPrinting">
+            <Link to="/threeDPrinting">
               <img className="img" src={mobileSlide2} />
-            </a>
+            </Link>
           </div>
           <div>
-            <a href="/RamLalla6">
+            <Link to="/RamLalla6">
               <img className="img" src={mobileSlide3} />
-            </a>
+            </Link>
           </div>
         </OwlCarousel>
       </div>
@@ -122,9 +123,9 @@ export default function MainSlider() {
               </strong>
             </p>
             <button className="btn btn-primary" id="Read-more-btn">
-              <a href="/AboutPage" target="_blank">
+              <Link to="/AboutPage" target="_blank">
                 <span> READ MORE ... </span>
-              </a>
+              </Link>
             </button>
           </div>
         </div>

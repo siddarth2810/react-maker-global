@@ -43,11 +43,11 @@ export default function Footer() {
                   3D Printers
                 </Link>
 
-                <a
+                <Link
                   className="small p-0 my-1 nav-link link-secondary"
-                  href="pdf/SCALE MODELS.pdf">
+                  to="/ScaleModels">
                   Scale Models
-                </a>
+                </Link>
                 <Link
                   className="small p-0 my-1 nav-link link-secondary"
                   to="/MetalPrinting">

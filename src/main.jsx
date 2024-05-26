@@ -31,7 +31,6 @@ import Gallery from "./Gallery/Gallery.jsx";
 import RamLalla6 from "./Shop_pages/RamLalla6.jsx";
 import RamLalla9 from "./Shop_pages/RamLalla9.jsx";
 import ScaleModels from "./Our_offering_pages/ScaleModels.jsx";
-import FloatingButtons from "./components/FloatingButtons.jsx";
 
 let prevScrollPos = window.scrollY;
 window.onscroll = function () {

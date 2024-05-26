@@ -1236,3 +1236,36 @@ div #manprotto-downloadIcon:hover {
   right: 15px; /* Adjust the position as needed */
   z-index: 100;
 }
+
+/* Media query for screens smaller than 768px (typical breakpoint for tablets and mobile devices) */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 14px; /* Adjust font size */
+    padding: 8px 10px; /* Adjust padding */
+  }
+
+  .navbar-brand {
+    font-size: 18px; /* Adjust brand font size */
+  }
+
+  .navbar-toggler {
+    padding: 6px 10px; /* Adjust toggler padding */
+  }
+
+  .dropdown-menu .dropdown-item {
+    font-size: 14px; /* Adjust dropdown item font size */
+    padding: 8px 10px; /* Adjust dropdown item padding */
+  }
+
+  .navbar-nav {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px; /* Add space between items */
+  }
+
+  .navbar-nav .nav-item:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last item */
+  }
+}
