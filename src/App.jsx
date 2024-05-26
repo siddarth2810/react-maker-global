@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
 import HeaderAndNav from "./components/HeaderAndNav";
 import "./App.css";
-import RenderName from "./components/RenderName";
-import { Link, createBrowserRouter } from "react-router-dom";
+
 import MainSlider from "./components/MainSlider";
 import CardsDisplay from "./components/CardsDisplay";
 import ClientDisplay from "./components/ClientDisplay";
