@@ -106,7 +106,6 @@ export default function ContactUs() {
         <div className="iframe-container">
           <strong>
             <iframe
-              frameborder="0"
               height="330px"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6335273550544!2d78.45227151412125!3d17.429366206182394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90a4a3959425%3A0xff797c9d1190cc11!2sMaker+Global+-+The+3D+Printing+Company+(+3D+Printers%2C+3D+Printing+Services%2C+Etc)!5e0!3m2!1sen!2sin!4v1522299321411"
               style={{ border: "0" }}

@@ -15,7 +15,7 @@ import mobileSlideVideo from "../assets/images/mobile-slider_1_.webm";
 export default function MainSlider() {
   return (
     <>
-      <div class="container-fluid d-none d-md-block" id="main-slider">
+      <div className="container-fluid d-none d-md-block" id="main-slider">
         <OwlCarousel
           items={1}
           className="owl-theme "
@@ -51,7 +51,7 @@ export default function MainSlider() {
         </OwlCarousel>
       </div>
       {/* carousel at mobile view */}
-      <div class="container-fluid d-md-none" id="mobile-slider">
+      <div className="container-fluid d-md-none" id="mobile-slider">
         <OwlCarousel
           items={1}
           className="owl-theme "
