@@ -6,10 +6,12 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import slide1 from "../assets/images/slide1.webp";
 import slide3 from "../assets/images/slide3.webp";
 import slide4 from "../assets/images/slide4.jpg";
+import video2 from "../assets/images/video2.webm";
 import video1 from "../assets/images/video1.webm";
 import mobileSlide1 from "../assets/images/mobile-slider1.webp";
 import mobileSlide2 from "../assets/images/mobile-slider2.webp";
 import mobileSlide3 from "../assets/images/mobile-slider3.jpg";
+import mobileSlide4 from "../assets/images/mobile-slider2.webm";
 import mobileSlideVideo from "../assets/images/mobile-slider_1_.webm";
 import { Link } from "react-router-dom";
 
@@ -49,6 +51,13 @@ export default function MainSlider() {
               <img className="img" src={slide4} />
             </Link>
           </div>
+          <div>
+            <Link to="/ScaleModels">
+              <video width="100%" muted autoPlay playsInline loop>
+                <source src={video2} type="video/webm" />
+              </video>
+            </Link>
+          </div>
         </OwlCarousel>
       </div>
       {/* carousel at mobile view */}
@@ -82,6 +91,13 @@ export default function MainSlider() {
           <div>
             <Link to="/RamLalla6">
               <img className="img" src={mobileSlide3} />
+            </Link>
+          </div>
+          <div>
+            <Link to="/ScaleModels">
+              <video width="100%" muted autoPlay playsInline loop>
+                <source src={mobileSlide4} type="video/webm" />
+              </video>
             </Link>
           </div>
         </OwlCarousel>
