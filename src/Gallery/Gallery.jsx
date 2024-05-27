@@ -49,13 +49,26 @@ function Gallery() {
     fetchData();
   }, []);
 
-  const categories = ["All", "Architecture", "Scale Models", "Transportation"];
+  const categories = [
+    "All",
+    "3D Printing",
+    "Scale Models",
+    "Manufacturing",
+    "Design/Scan",
+    "Movie Works",
+    "Manprotto",
+    "Photos",
+  ];
 
   // Mapping of display names to filename parts
   const categoryMapping = {
-    Architecture: "architecture",
+    "3D Printing": "3dprinting",
     "Scale Models": "scalemodels",
-    Transportation: "transportation",
+    Manufacturing: "manufacturing",
+    "Design/Scan": "designscan",
+    "Movie Works": "movie",
+    Manprotto: "manprotto",
+    Photos: "photos",
   };
 
   const getCategoryImages = (e) => {
@@ -113,7 +126,6 @@ function Gallery() {
                     <img
                       className="img-responsive"
                       src={image.originalFileUrl}
-                      alt={`Image ${image.originalFilename}`}
                     />
                   </a>
                 ))}

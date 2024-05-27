@@ -69,19 +69,19 @@ const RamLalla9 = () => {
               plugins={[lgThumbnail, lgZoom, lgVideo]}
               mobileSettings={{ showCloseButton: true }}>
               <a data-src={FirstImage}>
-                <img src={FirstImage} alt="Image 1" className="RamLallaImage" />
+                <img src={FirstImage} className="RamLallaImage" />
               </a>
 
               <a data-src={SecondImage}>
-                <img src={SecondImage} alt="Image 2" className="sliderImages" />
+                <img src={SecondImage} className="sliderImages" />
               </a>
 
               <a data-src={ThirdImage}>
-                <img src={ThirdImage} alt="Image 4" className="sliderImages" />
+                <img src={ThirdImage} className="sliderImages" />
               </a>
 
               <a data-src="https://www.youtube.com/embed/bI-VcvXhzJo">
-                <img src={FourthImage} alt="Image 4" className="sliderImages" />
+                <img src={FourthImage} className="sliderImages" />
               </a>
             </LightGallery>
           </div>

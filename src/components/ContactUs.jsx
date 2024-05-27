@@ -24,8 +24,8 @@ export default function ContactUs() {
                   </strong>
                 </h5>
                 <p>
-                  Imperial Plaza, 203, Panjagutta colony, Hyderabad Telangana
-                  500082
+                  Imperial Plaza, 203, Panjagutta Officers colony, Hyderabad,{" "}
+                  Telangana-500082
                 </p>
               </div>
             </div>

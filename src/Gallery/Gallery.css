@@ -21,7 +21,6 @@
 .Gallery-container {
   padding: 5px;
   text-align: center;
-  background-color: #f8f9fa;
 }
 
 .categories-box h1 {
@@ -66,3 +65,39 @@
     max-width: 100%;
   }
 }
+/* 
+#dropdown-basic {
+  margin: 10px 0;
+  background-color: #7bc74d;
+  border: #7bc74d;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 1rem;
+} */
+
+/* Gallery.css or custom CSS file */
+
+/* .dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+} */
+
+/* .dropdown-item {
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #7bc74d;
+  color: #fff;
+}
+
+.dropdown-item.selected {
+  background-color: #7bc74d;
+  color: #fff;
+} */
