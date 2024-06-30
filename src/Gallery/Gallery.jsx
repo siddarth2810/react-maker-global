@@ -7,6 +7,7 @@ import "lightgallery/scss/lg-zoom.scss";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
 import {
   UploadcareSimpleAuthSchema,
   listOfFiles,
@@ -24,7 +25,7 @@ function Gallery() {
   const [imageObject, setImageObject] = useState([]);
   const [filteredImages, setFilteredImages] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("Scale Models");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -133,6 +134,7 @@ function Gallery() {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }

@@ -37,7 +37,7 @@ const firstRow = [
 
 const secondRow = [
   {
-    imgSrc: offering5,
+    imgSrc: offering7,
     title: "CNC Machining",
     destination: "/CNC",
   },
@@ -47,7 +47,7 @@ const secondRow = [
     destination: "/VaccumCasting",
   },
   {
-    imgSrc: offering7,
+    imgSrc: offering5,
     title: "Reverse Engineering",
     destination: "/ReverseEngineering",
   },
