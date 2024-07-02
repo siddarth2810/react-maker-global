@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
@@ -6,26 +7,20 @@ import "lightgallery/scss/lightgallery.scss";
 import "lightgallery/scss/lg-zoom.scss";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
-import React, { useEffect, useState } from "react";
-import Footer from "../components/Footer";
-import {
-  UploadcareSimpleAuthSchema,
-  listOfFiles,
-} from "@uploadcare/rest-client";
-import "./Gallery.css";
-
+import { UploadcareSimpleAuthSchema, listOfFiles } from "@uploadcare/rest-client";
 import { ClipLoader } from "react-spinners";
 import HeaderAndNav from "../components/HeaderAndNav";
+import "./Gallery.css";
 
 function Gallery() {
-  const onInit = () => {
-    console.log("lightGallery has been initialized");
-  };
-
   const [imageObject, setImageObject] = useState([]);
   const [filteredImages, setFilteredImages] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [displayedImages, setDisplayedImages] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("Scale Models");
+  const [visibleRows, setVisibleRows] = useState(3);
+
+  const IMAGES_PER_ROW = 5;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,15 +35,23 @@ function Gallery() {
           { authSchema: uploadcareSimpleAuthSchema }
         );
         setImageObject(result.results);
-        setFilteredImages(result.results); // Initially, filteredImages is the same as imageObject
-        setLoading(false); // Set loading to false
+        
+        const filteredScaleModels = filterImagesByCategory("Scale Models", result.results);
+        setFilteredImages(filteredScaleModels);
+        setDisplayedImages(filteredScaleModels.slice(0, visibleRows * IMAGES_PER_ROW));
+        
+        setLoading(false);
       } catch (error) {
         console.log(error);
-        setLoading(false); // Set loading to false
+        setLoading(false);
       }
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    setDisplayedImages(filteredImages.slice(0, visibleRows * IMAGES_PER_ROW));
+  }, [filteredImages, visibleRows]);
 
   const categories = [
     "All",
@@ -61,7 +64,6 @@ function Gallery() {
     "Photos",
   ];
 
-  // Mapping of display names to filename parts
   const categoryMapping = {
     "3D Printing": "3dprinting",
     "Scale Models": "scalemodels",
@@ -72,18 +74,28 @@ function Gallery() {
     Photos: "photos",
   };
 
+  const filterImagesByCategory = (category, images) => {
+    if (category === "All") {
+      return images;
+    } else {
+      const filenamePart = categoryMapping[category];
+      return images.filter((image) =>
+        image.originalFilename.includes(filenamePart)
+      );
+    }
+  };
+
   const getCategoryImages = (e) => {
     const category = e.target.innerText;
     setSelectedCategory(category);
-    if (category === "All") {
-      setFilteredImages(imageObject); // If the category is "All", show all images
-    } else {
-      const filenamePart = categoryMapping[category];
-      const newFilteredImages = imageObject.filter((image) =>
-        image.originalFilename.includes(filenamePart)
-      );
-      setFilteredImages(newFilteredImages); // Update the filteredImages state
-    }
+    setVisibleRows(3);  // Reset to initial 3 rows when changing category
+    
+    const newFilteredImages = filterImagesByCategory(category, imageObject);
+    setFilteredImages(newFilteredImages);
+  };
+
+  const handleShowMore = () => {
+    setVisibleRows(prevRows => prevRows + 3);
   };
 
   return (
@@ -103,39 +115,49 @@ function Gallery() {
           </ul>
         </div>
 
-        {loading ? ( // Conditional rendering based on loading state
+        {loading ? (
           <div className="spinner-container">
             <ClipLoader size={50} color={"#007bff"} loading={loading} />
           </div>
         ) : (
-          <div className="image-box">
-            <LightGallery
-              onInit={() => console.log("lightGallery has been initialized")}
-              speed={500}
-              plugins={[lgThumbnail, lgZoom]}
-              mobileSettings={{ showCloseButton: true }}
-              thumbnail={true}
-              galleryId={"nature"}>
-              {filteredImages
-                .slice()
-                .reverse()
-                .map((image, index) => (
-                  <a
-                    key={index}
-                    className="gallery-item"
-                    data-src={image.originalFileUrl}>
-                    <img
-                      className="img-responsive"
-                      src={image.originalFileUrl}
-                    />
-                  </a>
-                ))}
-            </LightGallery>
-          </div>
+          <>
+            <div className="image-box">
+              <LightGallery
+                onInit={() => console.log("lightGallery has been initialized")}
+                speed={500}
+                plugins={[lgThumbnail, lgZoom]}
+                mobileSettings={{ showCloseButton: true }}
+                thumbnail={true}
+                galleryId={"nature"}>
+                {displayedImages
+                  .slice()
+                  .reverse()
+                  .map((image, index) => (
+                    <a
+                      key={index}
+                      className="gallery-item"
+                      data-src={image.originalFileUrl}>
+                      <img
+                        className="img-responsive"
+                        src={image.originalFileUrl}
+                        alt={`Gallery image ${index + 1}`}
+                      />
+                    </a>
+                  ))}
+              </LightGallery>
+            </div>
+            {filteredImages.length > displayedImages.length && (
+              <div className="text-center mt-4 mb-4">
+                <button className="btn btn-outline-success show-more-button" onClick={handleShowMore}>
+                  Show More
+                </button>
+              </div>
+            )}
+          </>
         )}
       </div>
-      <Footer />
     </>
   );
 }
+
 export default Gallery;
